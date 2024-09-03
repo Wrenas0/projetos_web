@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .btn {
+    background-color: #cc00ff;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+  }
