@@ -1,0 +1,23 @@
+.video-container{
+    position: relative;
+    width: 640px;
+
+}
+.controls{
+    background-color: gray;
+    color: white;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    padding: 30px;
+    width: 640;
+    bottom:0;
+    left: 0;
+}
+.controls button, .controls input{
+    margin-right: 10px;
+}
+.video{
+    width: 100px;
+    height: auto;
+}
