@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario paia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="rotulo">
+        <h1 class="title">FICHA DE MATRICULA</h1>
+    </div>
+    <div class="mat">
+        <label for="data">Data da matricula <input type="date" name="Data" id="data" required></label>
+        <label for="cod" class="cdg">Codigo da matricula <input type="number" name="Codigo" id="code" required placeholder="___.____._____-__"></label>
+    </div>
+    <hr>
+    <div class="rotulo">
+        <h2 class="title">DADOS DOS ALUNOS</h2>
+    </div>
+    <div class="mat">
+        <div class="spr">
+            <label for="nome">Nome: <input type="text" required placeholder="Insira seu nome completo"></label>
+            <label for="Nasc">Data de Nasc. <input type="date" name="Nasc"></label>
+        </div>
+        <div class="spr">
+            <label for="Nat">Cidadania: <input type="text" required placeholder="Insira seu local de nascença..."></label> 
+            <label for="UF">UF: <select name="estados-brasil" id="estados-brasil">
+                <option value="NN">Selecione um estado...</option> 
+                <option value="AC">Acre (AC)</option>
+                <option value="AL">Alagoas (AL)</option>
+                <option value="AP">Amapá (AP)</option>
+                <option value="AM">Amazonas (AM)</option>
+                <option value="BA">Bahia (BA)</option>
+                <option value="CE">Ceará (CE)</option>
+                <option value="DF">Distrito Federal (DF)</option>
+                <option value="ES">Espírito Santo (ES)</option>
+                <option value="GO">Goiás (GO)</option>
+                <option value="MA">Maranhão (MA)</option>
+                <option value="MT">Mato Grosso (MT)</option>
+                <option value="MS">Mato Grosso do Sul (MS)</option>
+                <option value="MG">Minas Gerais (MG)</option>
+                <option value="PA">Pará (PA)</option>
+                <option value="PB">Paraíba (PB)</option>
+                <option value="PR">Paraná (PR)</option>
+                <option value="PE">Pernambuco (PE)</option>
+                <option value="PI">Piauí (PI)</option>
+                <option value="RJ">Rio de Janeiro (RJ)</option>
+                <option value="RN">Rio Grande do Norte (RN)</option>
+                <option value="RS">Rio Grande do Sul (RS)</option>
+                <option value="RO">Rondônia (RO)</option>
+                <option value="RR">Roraima (RR)</option>
+                <option value="SC">Santa Catarina (SC)</option>
+                <option value="SP">São Paulo (SP)</option>
+                <option value="SE">Sergipe (SE)</option>
+                <option value="TO">Tocantins (TO)</option>
+              </select>
+              </label>
+              <form>
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" maxlength="14" 
+                       pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
+                       title="O CPF deve estar no formato: XXX.XXX.XXX-XX" 
+                       placeholder="XXX.XXX.XXX-XX" required>
+              </form>
+              
+        </div>
+        <div class="spr">
+            <form>
+                <label for="rg">RG:</label>
+                <input type="text" id="rg" name="rg" maxlength="12" 
+                       pattern="\d{1,2}\.\d{3}\.\d{3}-\d{1}" 
+                       title="O RG deve estar no formato: X.XXX.XXX-X ou XX.XXX.XXX-X" 
+                       placeholder="XX.XXX.XXX-X" required>
+              </form>
+              
+            <label for="OE">Orgão Exped. <input type="text" required placeholder=""></label>
+            <label for="SX">Sexo/Gênero 
+            <select name="SX">
+                <option value="0">Selecione um...</option>
+                <option value="1">Homem</option>
+                <option value="2">Mulher</option>
+                <option value="3">Prefiro não informar</option>
+            </select>
+        </label>
+        </div>
+    </div>
+    <hr>
+    <div class="rotulo">
+        <h2 class="title">FILIAÇÃO</h2>
+    </div>
+    <div class="mat">
+        <div class="spr">
+            <label for="pai">Pai: <input type="text" required placeholder="Insira o nome do seu pai..."></label>
+            <form>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" maxlength="15" 
+                       pattern="\(\d{2}\)\s\d{5}-\d{4}" 
+                       title="O telefone deve estar no formato: (XX) XXXXX-XXXX" 
+                       placeholder="(XX) XXXXX-XXXX" required>
+              </form>
+              
+        </div>
+        <div class="spr"></div>
+            <label for="mae">Mãe: <input type="text" required placeholder="Insira o nome da sua mãe..."></label>
+            <form>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" maxlength="15" 
+                       pattern="\(\d{2}\)\s\d{5}-\d{4}" 
+                       title="O telefone deve estar no formato: (XX) XXXXX-XXXX" 
+                       placeholder="(XX) XXXXX-XXXX" required>
+              </form>
+        </div>
+        <div class="spr">
+            <label for="rsp">Nome do responsável: <input type="text" required placeholder="Insira nome do seu responsável legal"></label>
+            <label for="grau">Grau de parentesco: <select name="par">
+                <option value="0">Pai/Mãe</option>
+                <option value="1">Irmãos/Ávos</option>
+                <option value="2">Bisavós/Tios</option>
+                <option value="3">Outro...</option>
+            </select></label>
+            <form>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" maxlength="15" 
+                       pattern="\(\d{2}\)\s\d{5}-\d{4}" 
+                       title="O telefone deve estar no formato: (XX) XXXXX-XXXX" 
+                       placeholder="(XX) XXXXX-XXXX" required>
+              </form>
+        </div>
+    </div>
+    <hr>
+    <div class="rotulo">
+        <h2 class="title">ENDEREÇO
+    </div>
+    <div class="spr">
+        <label for="rua">Rua: <input type="text" required placeholder="Insira sua rua..."> N° <input type="number" min="0" max="9999"></label>
+    </div>
+    <div class="spr">
+        <label for="Bairro">Bairro: <input type="text" required placeholder="Insira seu bairro..."></label>
+        <label for="Complemento">Complemento: <input type="text" placeholder="Insira um complemento..."></label>
+    </div>
+    <div class="spr">
+        <form>
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" maxlength="9" 
+                   pattern="\d{5}-\d{3}" 
+                   title="O CEP deve estar no formato: XXXXX-XXX" 
+                   placeholder="XXXXX-XXX" required>
+        </form> 
+        <label for="Cidade/Estado"> Cidade/Estado:
+            <select name="cidades-estados-brasil" id="cidades-estados-brasil">
+                <option value="NN">Selecione uma cidade/estado...</option>
+                <option value="AC|Rio Branco">Rio Branco - Acre (AC)</option>
+                <option value="AL|Maceió">Maceió - Alagoas (AL)</option>
+                <option value="AP|Macapá">Macapá - Amapá (AP)</option>
+                <option value="AM|Manaus">Manaus - Amazonas (AM)</option>
+                <option value="BA|Salvador">Salvador - Bahia (BA)</option>
+                <option value="CE|Fortaleza">Fortaleza - Ceará (CE)</option>
+                <option value="DF|Brasília">Brasília - Distrito Federal (DF)</option>
+                <option value="ES|Vitória">Vitória - Espírito Santo (ES)</option>
+                <option value="GO|Goiânia">Goiânia - Goiás (GO)</option>
+                <option value="MA|São Luís">São Luís - Maranhão (MA)</option>
+                <option value="MT|Cuiabá">Cuiabá - Mato Grosso (MT)</option>
+                <option value="MS|Campo Grande">Campo Grande - Mato Grosso do Sul (MS)</option>
+                <option value="MG|Belo Horizonte">Belo Horizonte - Minas Gerais (MG)</option>
+                <option value="PA|Belém">Belém - Pará (PA)</option>
+                <option value="PB|João Pessoa">João Pessoa - Paraíba (PB)</option>
+                <option value="PR|Curitiba">Curitiba - Paraná (PR)</option>
+                <option value="PE|Recife">Recife - Pernambuco (PE)</option>
+                <option value="PI|Teresina">Teresina - Piauí (PI)</option>
+                <option value="RJ|Rio de Janeiro">Rio de Janeiro - Rio de Janeiro (RJ)</option>
+                <option value="RN|Natal">Natal - Rio Grande do Norte (RN)</option>
+                <option value="RS|Porto Alegre">Porto Alegre - Rio Grande do Sul (RS)</option>
+                <option value="RO|Porto Velho">Porto Velho - Rondônia (RO)</option>
+                <option value="RR|Boa Vista">Boa Vista - Roraima (RR)</option>
+                <option value="SC|Florianópolis">Florianópolis - Santa Catarina (SC)</option>
+                <option value="SP|São Paulo">São Paulo - São Paulo (SP)</option>
+                <option value="SE|Aracaju">Aracaju - Sergipe (SE)</option>
+                <option value="TO|Palmas">Palmas - Tocantins (TO)</option>
+              </select>              
+        </label>       
+    </div>
+    <hr>
+    <div class="rotulo">
+        <h2 class="title">ANO ESCOLAR</h2>
+    </div>
+    <div class="spr">
+        Ano escolar:
+        <select name="anos-escolares" id="anos-escolares">
+            <option value="NN">Selecione um...</option>
+            <option value="NN">Sem escolaridade</option>
+            <option value="maternal">Maternal</option>
+            <option value="pre-1">Pré-Escola 1</option>
+            <option value="pre-2">Pré-Escola 2</option>
+            <option value="1-ano">1º Ano do Ensino Fundamental</option>
+            <option value="2-ano">2º Ano do Ensino Fundamental</option>
+            <option value="3-ano">3º Ano do Ensino Fundamental</option>
+            <option value="4-ano">4º Ano do Ensino Fundamental</option>
+            <option value="5-ano">5º Ano do Ensino Fundamental</option>
+            <option value="6-ano">6º Ano do Ensino Fundamental</option>
+            <option value="7-ano">7º Ano do Ensino Fundamental</option>
+            <option value="8-ano">8º Ano do Ensino Fundamental</option>
+            <option value="9-ano">9º Ano do Ensino Fundamental</option>
+            <option value="1-ano-EM">1º Ano do Ensino Médio</option>
+            <option value="2-ano-EM">2º Ano do Ensino Médio</option>
+            <option value="3-ano-EM">3º Ano do Ensino Médio</option>
+          </select>
+    </div>
+    <hr>
+    <div class="rotulo">
+        <h2 class="title">RELAÇÃO DE DOCUMENTOS PARA A MATRICULA</h2>
+    </div>
+    <div class="spr">
+        <label for="doc">Documento: <input type="text"></label>
+    </div>
+    <hr>
+    <div class="rotulo">
+        <h2 class="title">OBSERVAÇÕES</h2>
+    </div>
+    <div class="spr">
+        <label for="obs">Observações: <textarea name="obs" placeholder="Insira observações"></textarea></label>
+    </div>
+    <div class="env">
+        <label for="env"><input type="submit"></label>
+    </div>
+</body>
+</html>
